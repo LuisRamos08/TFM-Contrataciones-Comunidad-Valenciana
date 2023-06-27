@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .presentation {
+            max-width: 15%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .presentation img {
+            max-width: 100%;
+            height: auto;
+        }
+        .title-2 {
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .description {
+                font-size: 14px;
+            }
+        }
+
+        .table-container {
+          width: 100%;
+          overflow-x: auto;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        th {
+          background-color: #B93835;
+          color: white;
+        }
+
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="presentation">
+    <img src="{{ url_for('static', filename='images/logo-umh.png') }}" alt="Logo UMH">
+</div>
+
+<div class="title-2">
+    <span>Análisis de los Niveles de Contratación en la Comunidad Valenciana: Una aproximación Mediante Regresión</span>
+</div>
+
+<div class="overview">
+    <div class="title">
+        <i class="fas fa-gauge"></i>
+        <span class="text">Tech Stack</span>
+    </div>
+
+    <div class="boxes">
+        <div class="box box1">
+            <i class="fa-brands fa-python"></i>
+            <span class="text">Python</span>
+            <span class="number">Flask/Dash</span>
+        </div>
+        <div class="box box2">
+            <i class="fa-brands fa-html5"></i>
+            <span class="text">HTML</span>
+            <span class="number"> &nbsp;</span>
+        </div>
+        <div class="box box3">
+            <i class="fa-brands fa-css3-alt"></i>
+            <span class="text">CSS</span>
+            <span class="number">Bootstrap</span>
+        </div>
+    </div>
+</div>
+
+<div class="activity">
+    <div class="title">
+        <i class="fa-solid fa-database"></i>
+        <span class="text">Base de Datos</span>
+    </div>
+
+    <div class="description">
+        Contratos registrados por municipio, género y grupo de edad, sector de actividad y grupo de ocupación.
+    </div>
+
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>CAMPO</th>
+                <td>ANYO</td>
+                <td>COD_GENERO</td>
+                <td>COD_GRUPO</td>
+                <td>COD_MUN</td>
+                <td>COD_PROV</td>
+                <td>COD_SECTOR</td>
+                <td>DESC_GENERO</td>
+                <td>DESC_GRUPO</td>
+                <td>DESC_SECTOR</td>
+                <td>MES</td>
+                <td>NOM_MUN</td>
+                <td>NOM_PROV</td>
+                <td>NUM_CONTRATOS</td>
+                <td>RANGO_EDAD</td>
+            </tr>
+            <tr>
+                <th>DESCRIPCIÓN</th>
+                <td>Año</td>
+                <td>Código del género</td>
+                <td>Código del grupo</td>
+                <td>Código del municipio</td>
+                <td>Código de la provincia</td>
+                <td>Código del sector</td>
+                <td>Género</td>
+                <td>Grupo</td>
+                <td>Sector</td>
+                <td>Mes</td>
+                <td>Municipio</td>
+                <td>Provincia</td>
+                <td>Número de contratos</td>
+                <td>Rango de Edad</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

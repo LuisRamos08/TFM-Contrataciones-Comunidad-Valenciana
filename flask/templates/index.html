@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Created by Tivotal-->
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TFM Dashboard - UMH</title>
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--css file-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+
+    <!--icon file-->
+    <link rel="icon" href="{{ url_for('static', filename='images/umh-logo.ico') }}" type="image/x-icon"/>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-building-columns"></i>
+        </div>
+
+        <span class="logo_name">UMH</span>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li>
+                <a href="/home" data-content="home">
+                    <i class="fab fa-microsoft"></i>
+                    <span class="link-name">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="/analisis" data-content="analisis">
+                    <i class="fas fa-clapperboard"></i>
+                    <span class="link-name">Analisis Descriptivo</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-simple"></i>
+                    <span class="link-name">Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-message"></i>
+                    <span class="link-name">Comments</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-closed-captioning"></i>
+                    <span class="link-name">Subtitles</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-copyright"></i>
+                    <span class="link-name">Copyright</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sack-dollar"></i>
+                    <span class="link-name">Earn</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-square-pen"></i>
+                    <span class="link-name">Customization</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout-mode">
+            <li>
+                <a href="#">
+                    <i class="fas fa-right-to-bracket"></i>
+                    <span class="link-name">Logout</span>
+                </a>
+            </li>
+
+            <li class="mode">
+                <a href="#">
+                    <i class="fas fa-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="dashboard">
+    <div class="top">
+        <i class="fas fa-bars sidebar-toggle"></i>
+    </div>
+
+    <div class="dash-content">
+        <div class="presentation">
+            <img src="static/img/nombre_de_la_imagen.jpg" alt="Descripción de la imagen">
+        </div>
+
+        <div class="overview">
+            <div class="title">
+                <i class="fas fa-gauge"></i>
+                <span class="text">Tech Stack</span>
+            </div>
+
+            <div class="boxes">
+                <div class="box box1">
+                    <i class="fa-brands fa-python"></i>
+                    <span class="text">Python</span>
+                    <span class="number">Flask/Dash</span>
+                </div>
+                <div class="box box2">
+                    <i class="fa-brands fa-html5"></i>
+                    <span class="text">HTML</span>
+                    <span class="number"> &nbsp;</span>
+                </div>
+                <div class="box box3">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <span class="text">CSS</span>
+                    <span class="number">Bootstrap</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="activity">
+            <div class="title">
+                <i class="fas fa-clock"></i>
+                <span class="text">Recent Subscribers</span>
+            </div>
+
+            <div class="activity-data">
+                <div class="data names">
+                    <span class="data-title">Name</span>
+                    <span class="data-list">Adarsh</span>
+                    <span class="data-list">Ambareesh</span>
+                    <span class="data-list">Manjunath</span>
+                    <span class="data-list">Nuthan</span>
+                    <span class="data-list">Srihari</span>
+                </div>
+                <div class="data email">
+                    <span class="data-title">Email</span>
+                    <span class="data-list">adarsh@gmail.com</span>
+                    <span class="data-list">ambareesh@gmail.com</span>
+                    <span class="data-list">manjunath@gmail.com</span>
+                    <span class="data-list">nuthan@gmail.com</span>
+                    <span class="data-list">srihari@gmail.com</span>
+                </div>
+                <div class="data subscriber">
+                    <span class="data-title">Subscribers</span>
+                    <span class="data-list">1.94M</span>
+                    <span class="data-list">1.4M</span>
+                    <span class="data-list">158K</span>
+                    <span class="data-list">148K</span>
+                    <span class="data-list">100K</span>
+                </div>
+                <div class="data type">
+                    <span class="data-title">Action</span>
+                    <span class="data-list">Subscribe</span>
+                    <span class="data-list">Subscribe</span>
+                    <span class="data-list">Subscribe</span>
+                    <span class="data-list">Subscribe</span>
+                    <span class="data-list">Subscribe</span>
+                </div>
+                <div class="data joined">
+                    <span class="data-title">Subscribed</span>
+                    <span class="data-list">2023-02-02</span>
+                    <span class="data-list">2023-02-03</span>
+                    <span class="data-list">2023-02-04</span>
+                    <span class="data-list">2023-02-05</span>
+                    <span class="data-list">2023-02-09</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+// Selecciona el primer elemento al inicio
+  $(".nav-links li a").first().addClass("active");
+
+  // Carga el contenido del primer elemento al inicio
+  var firstContent = $(".nav-links li a").first().data('content');
+  $.ajax({
+    url: '/' + firstContent,
+    success: function(data) {
+      $(".dash-content").html(data);
+    }
+  });
+$(document).ready(function() {
+  $(".nav-links li a").click(function(e) {
+    e.preventDefault();
+
+    $(".nav-links li a").removeClass("active");  // quita la clase 'active' a todos los elementos
+    $(this).addClass("active");  // añade la clase 'active' al elemento seleccionado
+
+    var content = $(this).data('content');
+
+    $.ajax({
+      url: '/' + content,
+      success: function(data) {
+        $(".dash-content").html(data);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
