@@ -12,7 +12,7 @@ from dash import dash_table
 import colorlover as cl
 
 # Cargar los datos que se quieren graficar
-df_2019 = pd.read_csv("../DB/2019/contratos_por_municipio-sector-grupo_ocupacion-genero-edad-2019.csv", sep=";")
+df_2019 = pd.read_csv("C:/Users/laptop/Documents/Maestria/TFM/proyecto/DB/2019/contratos_por_municipio-sector-grupo_ocupacion-genero-edad-2019.csv", sep=";")
 
 # Dataframe Número de Contratos por provincia en base al Genero
 df_contratos_by_genero = df_2019.groupby(['NOM_PROV', 'DESC_GENERO'])['NUM_CONTRATOS'].sum().reset_index(
@@ -37,10 +37,11 @@ df_contratos_by_grupo_and_edad = df_2019.groupby(['COD_GRUPO', 'RANGO_EDAD'])['N
 # Dataframe Número de Contratos en base al Grupo y el Genero
 df_contratos_by_grupo_and_genero = df_2019.groupby(['COD_GRUPO', 'DESC_GENERO'])['NUM_CONTRATOS'].sum().reset_index(
     name='total_contratos')
-
+"""
 print(df_contratos_by_grupo)
 print(df_contratos_by_grupo_and_edad)
 print(df_contratos_by_grupo_and_genero)
+"""
 # Dataframe Número de Contratos en base al Grupo y el Genero
 df_grupos = df_2019[['COD_GRUPO', 'DESC_GRUPO']].drop_duplicates()
 df_grupos = df_grupos.sort_values('COD_GRUPO')
@@ -49,9 +50,9 @@ df_grupos = df_grupos.sort_values('COD_GRUPO')
 """
 print("NOM_PROV por DESC_GENERO:")
 print(df_nom_prov_genero)
-print("\nNOM_PROV por EDAD:")
+print("/nNOM_PROV por EDAD:")
 print(df_nom_prov_edad)
-print("\nNOM_PROV por DESC_SECTOR:")
+print("/nNOM_PROV por DESC_SECTOR:")
 print(df_nom_prov_sector)
 """
 
@@ -65,7 +66,7 @@ df_prov.loc[df_prov['COD_PROV'] == '3', 'COD_PROV'] = '03'
 pd.set_option('display.max_columns', None)
 
 # Para poder graficar en el mapa necesitamos las localizaciones.
-with open('../DB/spain-provinces.geojson', 'r', encoding='utf-8') as f:
+with open('C:/Users/laptop/Documents/Maestria/TFM/proyecto/DB/spain-provinces.geojson', 'r', encoding='utf-8') as f:
     geojson = json.load(f)
 
 # Filtrar el geojson para mostrar solo las provincias de Alicante, Castellón y Valencia
